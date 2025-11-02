@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -191,7 +192,7 @@ footer {
   color: #fff;
   border: none;
   border-radius: 50%;
-  padding: 12px;
+  padding: 10px 15px;
   cursor: pointer;
   font-size: 1.2rem;
   display: none;
