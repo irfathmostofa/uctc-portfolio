@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Irfath | Web Developer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      (function () {
+        emailjs.init("P9ZGW1VF1qia5P_ng");
+      })();
+    </script>
     <script defer src="script.js"></script>
   </head>
+
   <body>
     <!-- Header -->
     <header id="header">
@@ -60,7 +70,6 @@
       <h2>Featured Projects</h2>
       <div class="project-grid">
         <div class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="POS System" />
           <h3>POS & Inventory System</h3>
           <p>
             Complete inventory and sales management with accounting module using
@@ -68,10 +77,6 @@
           </p>
         </div>
         <div class="project-card">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Random Generator"
-          />
           <h3>Random Number Generator</h3>
           <p>
             Fun web app with animations, sounds, and bullseye-style visuals
@@ -79,7 +84,6 @@
           </p>
         </div>
         <div class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="ML Model" />
           <h3>Machine Learning Model</h3>
           <p>
             Python-based ML model for symptom-to-disease prediction using
@@ -90,15 +94,48 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <p>Let’s connect! Reach out for collaborations or just say hi 👋</p>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <section id="contact" class="section">
+      <div class="container contact">
+        <h2>Contact Me</h2>
+        <p class="contact-desc">
+          Feel free to reach out for collaborations or project inquiries.
+        </p>
+
+        <form class="contact-form form" id="contactForm">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Subject"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+
+          <button type="submit" id="sendBtn" class="btn">Send Message</button>
+        </form>
+
+        <p id="formStatus" aria-live="polite" style="margin-top: 12px"></p>
+      </div>
     </section>
 
     <!-- Footer -->
